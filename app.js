@@ -65,6 +65,7 @@ const renderGame = () => {
     playerWin.textContent = "Wins: " + win;
     playerlose.textContent = "Losses: " + lose;
     playerDraw.textContent = "Draws: " + draw;
+    messageEL.style.color = "white";
 }
 
 hitBtn.addEventListener("click", () => {
@@ -84,12 +85,31 @@ stayBtn.addEventListener("click", () => {
         let card = getRandomCards();
         dealerScore += card;
         dealerHand.push(card);
+      
    }
 
    if(dealerScore > playerScore && dealerScore < 22 ) {
         messageEL.style.color = "darkred";
         message = "Dealer won the game!";
+        playerAlive = false;
+        lose++;
    }
+
+   else if (playerScore > dealerScore && playerScore < 22 ){
+    messageEL.style.color = "goldenrod";
+    message = "You won the game!";
+    playerAlive = false;
+    win++;
+   }
+
+   else if (playerScore === dealerScore) {
+    message = "It's a Draw!";
+    playerAlive = false;
+    draw++
+   }
+   messageEL.textContent = message;
+   renderGame();
+   gameState();
 })
 
 

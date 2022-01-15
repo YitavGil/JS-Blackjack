@@ -19,7 +19,7 @@
 }
 
 .game-board{
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     width: 70%;
     height: 70vh;
     margin: auto;
