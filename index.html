@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <title>BlackJack</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game-board">
+            <h1 class="title">BlackJack</h1>
+            <button id="start" class="btn btn-start">Start Game</button>
+            <h4 id="message-el"></h4>
+            <div class="bottom-board">
+                <div class="player-hand">
+                    <h2>Your Hand</h2>
+                    <div class="hand-container">
+                        <p id="player-cards">Cards:</p>
+                        <p id="player-sum">Sum:</p>
+                    </div>
+                    <div class="btn-container">
+                        <button id="hit" class="btn">Hit me</button>
+                        <button id="stay" class="btn">Stay</button>
+                    </div>
+                </div>
+                <div class="score">
+                <h1>Score:</h1>
+                <h3 id="wins">Wins: </h3>
+                <h3 id="loses">Losses: </h3>
+                <h3 id="draws">Draws: </h3>
+                 </div>
+                <div class="dealer-hand">
+                    <h2>Dealer Hand</h2>
+                    <div class="hand-container">
+                        <p id="dealer-cards">Cards:</p>
+                        <p id="dealer-sum">Sum:</p>
+                    </div>
+                    <button class="no-btn">Hit me</button>
+                </div>
+                
+            </div>
+           
+            
+        </div>
+
+       
+
+
+    </div>
+    
+</body>
+</html>
